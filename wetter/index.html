@@ -19,13 +19,14 @@
 			height: 100%;
 		}
 
-		#myVideo {
-		  position: fixed;
-		  right: 0;
-		  bottom: 0;
-		  min-width: 100%;
-		  min-height: 100%;
-		}
+		.left-container {
+			width: 100%;
+			height: 100%;
+			background-image: url( 'bg.jpg' );
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+
 		}
 
 		.bg {
@@ -68,15 +69,11 @@
 		.desc {
 			font-size: 30px;
 		}
-
-
 	</style>
 </head>
 <body>
 	<div class="front">
-		<video autoplay muted loop id="myVideo">
-		  <source src="bg.mp4" type="video/mp4">
-		</video>
+		<div class="left-container">
 			<div class="bg"></div>
 				<div class="date-container">
 					<span class="day"><span id="day"></span><span id="date" class="date"></span></span>
@@ -127,5 +124,6 @@
 
 	setTimeout( updateDateInfo, 30 * 60 * 1000 );
 	setTimeout( updateWeatherInfo, 5 * 60 * 1000 );
+
 
 </script>
