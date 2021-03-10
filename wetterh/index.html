@@ -114,7 +114,7 @@
 	function updateWeatherInfo() {
 		fetch( `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit_map}&APPID=${API_KEY}&lang=de` )
 		.then( response => response.json() ).then( data => {
-			document.getElementById( 'desc' ).innerHTML = data['weather'][0]['main'];
+			document.getElementById( 'desc' ).innerHTML = data['weather'][0]['description'];
 			document.getElementById( 'temp' ).innerHTML = Math.round( data['main']['temp'] );
 		} )
 	}
